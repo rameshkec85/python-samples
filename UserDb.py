@@ -37,7 +37,19 @@ def deleteStudent(id):
             con.commit()
     except Exception as e:
         print(traceback.format_exc())  
-    return "Success"          
+    return "Success"   
+
+
+@app.route('/update_student/<int:id>/<name>')
+def updateStudent(id,name):
+    try:
+        with app.app_context():
+            cursor=con.cursor() #varchar
+            cursor.execute('update students set name='+name+' where id='+str(id))
+            con.commit()
+    except Exception as e:
+        print(traceback.format_exc())  
+    return "Success"             
 
 @app.route('/students')
 def getStudents():
