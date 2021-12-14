@@ -1,0 +1,12 @@
+<html>
+
+<body>
+    
+    {%for u in users %} 
+        {% if u.name!='Ramesh' %}
+            <li>{{ u.name }}</li>
+        {%endif%}
+    {%endfor%}
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+
+    <!-- <link rel="./mystyle.css'"> -->
+    
+    <style>
+        table, tr,td{
+            border: 1px solid black;
+            
+        }
+    </style>
+    <body>
+
+
+        <table>
+            <tr>
+        {%for u in weatherlist %} 
+            
+                <td>
+                    {{ u.ftime }}
+                </td>
+                
+        
+        {%endfor%}
+    </tr>
+    <tr>
+        {%for u in weatherlist %} 
+            
+                <td>
+                    {{ u.temp }}º
+                </td>
+        
+        {%endfor%}
+    </tr>
+</table>
+
+
+    </body>
+</html>
