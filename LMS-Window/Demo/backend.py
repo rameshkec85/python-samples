@@ -47,6 +47,7 @@ def users():
     rows=library.getUsers()
     list=[]
     for row in rows:
+        print(row['name'])
         list.append({'name':row[1],'role':row[2]})
     return json.dumps(list)    
 

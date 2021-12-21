@@ -67,4 +67,40 @@ Book Issue :
 2.Return a Book to Library
 
 
+#DATE TIME (SQLITE)
+CREATE table dt(issue text)
+
+INSERT into dt(issue) values(datetime('now', 'localtime'))
+
+SELECT * from dt
+
+SELECT	date(issue),	time(issue) FROM	dt;
+
+SELECT * FROM dt WHERE    strftime('%s',issue) BETWEEN strftime('%s', '2021-12-12') AND strftime('%s', '2021-12-30')
+
+SELECT * FROM dt WHERE    strftime('%s',issue) > strftime('%s', '2021-12-15')
+
+
+-------- 
+Backend + Front End (Fullstack)
+
+Backend: Create Database and provide the data in the form of JSON/XML
+Frontend: Consume Rest APIs and disply it on Website/Mobile App/Desktop app
+
+Project:
+1. Requirement (Software Requiremnt Specifications) : 
+2. Analysis : Define Features
+3. Design (proto type) : Wireframes ->Client Feedback-> Changes   
+4. Developemnt
+5. Testing  
+6. Deployment(Production)
+
+-----
+LMS:
+1. Users: (Staff/Students)
+2. Books
+3. Issue Book: (Request Issue/Issue Book/Return Book)
+
+
+
  

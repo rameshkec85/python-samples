@@ -8,6 +8,7 @@ def createUsersTable():
 
 def getUsers():
     con=sqlite3.connect(DATABASE_NAME,check_same_thread=False)
+    con.row_factory = sqlite3.Row #Add this: To get data by column name
     cur=con.cursor()
     cur.execute('select * from users')
     rows=cur.fetchall() #POSTGRESQL
